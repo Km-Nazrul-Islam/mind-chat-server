@@ -6,8 +6,8 @@ const helmet = require("helmet")
 const morgan = require("morgan")
 const userRouter = require("./routes/user")
 const adminRouter = require("./routes/admin")
-const sellerRouter = require("./routes/seller")
 const authRouter = require("./routes/auth")
+const postRouter = require("./routes/post")
 
 dotenv.config()
 
@@ -33,7 +33,7 @@ app.use("/api/auth", authRouter)
 
 app.use("/api/admin", adminRouter)
 
-app.use("/api/seller", sellerRouter)
+app.use("/api/post", postRouter)
 
 app.listen(8800, () => {
   console.log("Backend Server Working Properly")
